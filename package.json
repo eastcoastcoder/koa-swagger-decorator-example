@@ -1,0 +1,46 @@
+{
+  "name": "koa-swagger",
+  "version": "1.0.0",
+  "description": "using decorator to automatically generate swagger doc for koa-router",
+  "main": "dist/index.js",
+  "dependencies": {
+    "@types/koa-router": "^7.0.31",
+    "koa-router": "^7.2.1",
+    "koa-swagger-decorator": "^1.6.4"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.46",
+    "@types/koa-bodyparser": "^5.0.1",
+    "@types/node": "^10.7.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "intelli-espower-loader": "^1.0.1",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-cors": "^0.0.16",
+    "koa-multer": "^1.0.2",
+    "koa-static": "^4.0.3",
+    "nodemon": "^1.18.3",
+    "prettier-eslint-cli": "^4.7.1"
+  },
+  "scripts": {
+    "start:babel": "babel-node main",
+    "watch:node": "nodemon --watch . --watch dist --exec npm run start:babel -L",
+    "start": "npm run watch:node",
+    "lint": "eslint .",
+    "format": "prettier-eslint --write \"**/*.js\"",
+    "debug": "babel-node main --inspect-brk --nolazy main"
+  },
+  "resolutions": {
+    "fsevents": "1.2.9",
+    "**/fsevents": "1.2.9"
+  },
+  "author": "",
+  "license": "ISC"
+}
